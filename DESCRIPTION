@@ -2,12 +2,12 @@ Package: saeHB.panel.beta
 Type: Package
 Title: Small Area Estimation using HB for Rao Yu Model under Beta
         Distribution
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(person("Dian Rahmawati", "Salis", role = c("aut", "cre"),
-                      email = "221911153@stis.ac.id"),
+                      email = "dianrahmawatisalis03@gmail.com"),
                       person("Azka", "Ubaidillah", role = "aut") )
-Maintainer: Dian Rahmawati Salis <221911153@stis.ac.id>
-Description: Several functions are provided for small area estimation at the area level using the hierarchical bayesian (HB) method with panel data under beta distribution for variable interest. This package also provides a dataset produced by data generation. The "rjags" package is employed to obtain parameter estimates. Model-based estimators involve the HB estimators, which include the mean and the variation of the mean. For the reference, see Rao and Molina (2015, ISBN: 978-1-118-73578-7).
+Maintainer: Dian Rahmawati Salis <dianrahmawatisalis03@gmail.com>
+Description: Several functions are provided for small area estimation at the area level using the hierarchical bayesian (HB) method with panel data under beta distribution for variable interest. This package also provides a dataset produced by data generation. The 'rjags' package is employed to obtain parameter estimates. Model-based estimators involve the HB estimators, which include the mean and the variation of the mean. For the reference, see Rao and Molina (2015, ISBN: 978-1-118-73578-7).
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
@@ -21,8 +21,8 @@ Imports: stringr, coda, rjags, stats, grDevices, graphics, dplyr
 Config/testthat/edition: 3
 SystemRequirements: JAGS (http://mcmc-jags.sourceforge.net)
 NeedsCompilation: no
-Packaged: 2023-02-27 14:04:11 UTC; LENOVO
+Packaged: 2023-03-08 03:24:11 UTC; LENOVO
 Author: Dian Rahmawati Salis [aut, cre],
   Azka Ubaidillah [aut]
 Repository: CRAN
-Date/Publication: 2023-02-27 17:00:02 UTC
+Date/Publication: 2023-03-08 09:30:02 UTC

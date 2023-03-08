@@ -27,7 +27,7 @@
 #'@examples
 #' ##For data without any non-sampled area
 #' data(dataBetaAr1)     # Load dataset
-#' dataBetaAr1 = dataBetaAr1[1:25,]
+#' dataBetaAr1 = dataBetaAr1[1:25,] #for the example only use part of the dataset
 #' formula = ydi ~ xdi1 + xdi2
 #' area = max(dataBetaAr1[, "area"])
 #' period = max(dataBetaAr1[,"period"])
