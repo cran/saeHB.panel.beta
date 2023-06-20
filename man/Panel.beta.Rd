@@ -44,6 +44,7 @@ This function returns a list of the following objects:
    \item{refVar}{Estimated random effect variances}
    \item{coef}{A dataframe with the estimated model coefficient}
    \item{plot}{Trace, Density, Autocorrelation Function Plot of MCMC samples}
+   \item{convergence.test}{Convergence diagnostic for Markov chains based on Geweke test}
 }
 \description{
 This function is implemented to variable of interest \code{ydi}
