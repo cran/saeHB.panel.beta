@@ -63,6 +63,7 @@ result$Est
 result$refVar
 result$coef
 result$plot
+result$convergence.test
 
 
 ## For data with non-sampled area use dataPanelbetaNs

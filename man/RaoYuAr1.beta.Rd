@@ -59,10 +59,14 @@ area = max(dataBetaAr1[, "area"])
 period = max(dataBetaAr1[,"period"])
 
 result <- RaoYuAr1.beta(formula, area, period, data = dataBetaAr1)
+
+
 result$Est
 result$refVar
 result$coefficient
 result$plot
+result$convergence.test
+
 ## For data with non-sampled area use dataBetaAr1Ns
 
 }

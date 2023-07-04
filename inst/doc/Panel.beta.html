@@ -388,39 +388,39 @@ Beta Distribution On sampel dataset</h1>
 <h3>Estimation</h3>
 <div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>result<span class="sc">$</span>Est</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;              MEAN         SD      2.5%       25%       50%       75%     97.5%</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[1,1] 0.9715606 0.02041852 0.9203568 0.9633999 0.9765683 0.9854062 0.9942387</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[2,1] 0.9477231 0.03722948 0.8546639 0.9335519 0.9571519 0.9721773 0.9885852</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[3,1] 0.9420694 0.04109096 0.8366193 0.9254650 0.9520202 0.9699483 0.9882071</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[4,1] 0.9679009 0.02354598 0.9070196 0.9588508 0.9741587 0.9834968 0.9937798</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[5,1] 0.9398689 0.05074443 0.8071438 0.9234227 0.9539235 0.9725740 0.9901445</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[1,2] 0.9718030 0.02033796 0.9178540 0.9646181 0.9766786 0.9860063 0.9945791</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[2,2] 0.9613276 0.02867886 0.8824150 0.9500238 0.9689116 0.9808281 0.9930026</span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[3,2] 0.9218819 0.05496428 0.7731063 0.9010465 0.9363732 0.9590512 0.9837168</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[4,2] 0.9773340 0.01859778 0.9257727 0.9709759 0.9823204 0.9895456 0.9963013</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[5,2] 0.9392130 0.04522412 0.8281190 0.9235998 0.9502550 0.9690026 0.9874561</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[1,3] 0.9699925 0.02413013 0.9095392 0.9621010 0.9760820 0.9851613 0.9948403</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[2,3] 0.8646523 0.07772166 0.6681956 0.8295668 0.8807569 0.9199075 0.9635835</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[3,3] 0.9521936 0.03085478 0.8705490 0.9379794 0.9594410 0.9736315 0.9901888</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[4,3] 0.9579856 0.02793382 0.8870496 0.9467738 0.9645635 0.9768359 0.9916759</span></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[5,3] 0.9143644 0.05777379 0.7746396 0.8921799 0.9268380 0.9523405 0.9824364</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[1,4] 0.9560309 0.03279288 0.8707281 0.9443073 0.9637896 0.9776447 0.9913856</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[2,4] 0.9318552 0.04686944 0.8108655 0.9151794 0.9439828 0.9634688 0.9846294</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[3,4] 0.9314057 0.04308526 0.8250752 0.9121812 0.9418000 0.9616466 0.9858158</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[4,4] 0.9750315 0.01959234 0.9230244 0.9682083 0.9805433 0.9880159 0.9953955</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[5,4] 0.8574879 0.09453895 0.5972792 0.8187320 0.8814479 0.9253846 0.9662069</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[1,5] 0.9681461 0.02381155 0.9078094 0.9605515 0.9743709 0.9838181 0.9939303</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[2,5] 0.8889299 0.07040826 0.7109140 0.8612449 0.9058258 0.9374863 0.9709366</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[3,5] 0.9569093 0.03210086 0.8726688 0.9462314 0.9649670 0.9778204 0.9917101</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[4,5] 0.9321876 0.04254882 0.8240138 0.9146160 0.9417190 0.9617918 0.9864306</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[5,5] 0.8661576 0.08281186 0.6511093 0.8271177 0.8850069 0.9259076 0.9679304</span></span></code></pre></div>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[1,1] 0.9723646 0.01988546 0.9201079 0.9646390 0.9774696 0.9857622 0.9945419</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[2,1] 0.9504942 0.03502089 0.8630018 0.9374191 0.9594256 0.9741599 0.9897589</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[3,1] 0.9404827 0.04303135 0.8381143 0.9232752 0.9506896 0.9693902 0.9868566</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[4,1] 0.9677085 0.02480553 0.9019329 0.9593819 0.9746669 0.9838332 0.9937106</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[5,1] 0.9384048 0.05155455 0.8004536 0.9211984 0.9519668 0.9726031 0.9891087</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[1,2] 0.9711678 0.02332950 0.9099700 0.9643911 0.9772097 0.9854531 0.9946645</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[2,2] 0.9620485 0.02922454 0.8832680 0.9528096 0.9699462 0.9816409 0.9931068</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[3,2] 0.9194822 0.05957849 0.7495519 0.8995691 0.9362532 0.9589887 0.9842574</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[4,2] 0.9784132 0.01757202 0.9343099 0.9723248 0.9835214 0.9897303 0.9962552</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[5,2] 0.9393995 0.04227668 0.8276464 0.9231419 0.9503435 0.9680730 0.9872528</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[1,3] 0.9697070 0.02613028 0.9053255 0.9618591 0.9769549 0.9862914 0.9947748</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[2,3] 0.8631422 0.08080947 0.6527226 0.8248033 0.8804411 0.9213678 0.9650013</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[3,3] 0.9527766 0.03312935 0.8691812 0.9392385 0.9610126 0.9754243 0.9906854</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[4,3] 0.9588217 0.02935259 0.8826801 0.9478538 0.9658777 0.9785639 0.9917609</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[5,3] 0.9180031 0.05377716 0.7854486 0.8933838 0.9308135 0.9563594 0.9844536</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[1,4] 0.9565112 0.03063022 0.8770255 0.9443020 0.9641875 0.9776012 0.9908984</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[2,4] 0.9343353 0.04453758 0.8239361 0.9144727 0.9452385 0.9648954 0.9859498</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[3,4] 0.9324975 0.04650926 0.8107264 0.9154400 0.9432929 0.9637524 0.9865727</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[4,4] 0.9749582 0.02061524 0.9197123 0.9687723 0.9810302 0.9882767 0.9958226</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[5,4] 0.8532826 0.10352755 0.5807657 0.8146789 0.8794483 0.9249112 0.9697079</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[1,5] 0.9685318 0.02296780 0.9132705 0.9593471 0.9738331 0.9843447 0.9941896</span></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[2,5] 0.8845380 0.07616064 0.6805150 0.8564243 0.9037395 0.9363240 0.9746034</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[3,5] 0.9584088 0.02957844 0.8815666 0.9483947 0.9656051 0.9783522 0.9920855</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[4,5] 0.9322914 0.04443227 0.8145631 0.9129610 0.9425996 0.9635384 0.9858808</span></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; mu[5,5] 0.8656492 0.08341843 0.6587511 0.8264686 0.8841106 0.9270130 0.9668841</span></span></code></pre></div>
 </div>
 <div id="coefficient-estimation" class="section level3">
 <h3>Coefficient Estimation</h3>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>result<span class="sc">$</span>coefficient</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;          Mean        SD       2.5%       25%      50%      75%    97.5%</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; b[0] 1.990836 0.3974607 1.21969892 1.7210717 1.982474 2.246929 2.754171</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; b[1] 1.072706 0.4971808 0.09933002 0.7384358 1.071070 1.403068 2.060664</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; b[2] 1.160849 0.4937285 0.21198137 0.8083115 1.156328 1.503292 2.115507</span></span></code></pre></div>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;          Mean        SD      2.5%       25%      50%      75%    97.5%</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; b[0] 1.957370 0.3994095 1.1508246 1.7048597 1.949409 2.223458 2.748593</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; b[1] 1.117109 0.4837017 0.1651149 0.7962683 1.102792 1.441359 2.068929</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; b[2] 1.147147 0.4666575 0.2191646 0.8366313 1.128705 1.437442 2.093535</span></span></code></pre></div>
 </div>
 <div id="random-effect-variance-estimation" class="section level3">
 <h3>Random effect variance estimation</h3>
@@ -433,14 +433,14 @@ Beta Distribution On sampel dataset</h1>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>MSE_HB<span class="ot">&lt;-</span>result<span class="sc">$</span>Est<span class="sc">$</span>SD<span class="sc">^</span><span class="dv">2</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(MSE_HB)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      Min.   1st Qu.    Median      Mean   3rd Qu.      Max. </span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 0.0003459 0.0005823 0.0013860 0.0021854 0.0025750 0.0089376</span></span></code></pre></div>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; 0.0003088 0.0006828 0.0012265 0.0023287 0.0026579 0.0107180</span></span></code></pre></div>
 </div>
 <div id="extract-rse" class="section level2">
 <h2>Extract RSE</h2>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>RSE_HB<span class="ot">&lt;-</span><span class="fu">sqrt</span>(MSE_HB)<span class="sc">/</span>result<span class="sc">$</span>Est<span class="sc">$</span>MEAN<span class="sc">*</span><span class="dv">100</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(RSE_HB)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. </span></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   1.903   2.488   3.928   4.556   5.399  11.025</span></span></code></pre></div>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;   1.796   2.695   3.684   4.668   5.494  12.133</span></span></code></pre></div>
 </div>
 <div id="you-can-compare-with-direct-estimator" class="section level2">
 <h2>You can compare with direct estimator</h2>
@@ -449,32 +449,32 @@ Beta Distribution On sampel dataset</h1>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>y<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">cbind</span>(y_dir,y_HB))</span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(y)</span>
 <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;      y_dir             y_HB       </span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Min.   :0.3836   Min.   :0.8575  </span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1st Qu.:0.9702   1st Qu.:0.9314  </span></span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Median :1.0000   Median :0.9477  </span></span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Mean   :0.9423   Mean   :0.9386  </span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3rd Qu.:1.0000   3rd Qu.:0.9679  </span></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Max.   :1.0000   Max.   :0.9773</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Min.   :0.3836   Min.   :0.8533  </span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1st Qu.:0.9702   1st Qu.:0.9323  </span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Median :1.0000   Median :0.9505  </span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Mean   :0.9423   Mean   :0.9385  </span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3rd Qu.:1.0000   3rd Qu.:0.9677  </span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Max.   :1.0000   Max.   :0.9784</span></span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>MSE_dir<span class="ot">&lt;-</span>dataPanelbeta[,<span class="dv">4</span>]</span>
 <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>MSE<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">cbind</span>(MSE_dir, MSE_HB))</span>
 <span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(MSE)</span>
 <span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     MSE_dir              MSE_HB         </span></span>
-<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Min.   :0.0004401   Min.   :0.0003459  </span></span>
-<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1st Qu.:0.0036464   1st Qu.:0.0005823  </span></span>
-<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Median :0.0228563   Median :0.0013860  </span></span>
-<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Mean   :0.0256965   Mean   :0.0021854  </span></span>
-<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3rd Qu.:0.0428368   3rd Qu.:0.0025750  </span></span>
-<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Max.   :0.0887137   Max.   :0.0089376</span></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Min.   :0.0004401   Min.   :0.0003088  </span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1st Qu.:0.0036464   1st Qu.:0.0006828  </span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Median :0.0228563   Median :0.0012265  </span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Mean   :0.0256965   Mean   :0.0023287  </span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3rd Qu.:0.0428368   3rd Qu.:0.0026579  </span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Max.   :0.0887137   Max.   :0.0107180</span></span>
 <span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>RSE_dir<span class="ot">&lt;-</span><span class="fu">sqrt</span>(MSE_dir)<span class="sc">/</span>y_dir<span class="sc">*</span><span class="dv">100</span></span>
 <span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>RSE<span class="ot">&lt;-</span><span class="fu">as.data.frame</span>(<span class="fu">cbind</span>(RSE_dir, RSE_HB))</span>
 <span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(RSE)</span>
 <span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;     RSE_dir           RSE_HB      </span></span>
-<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Min.   : 2.098   Min.   : 1.903  </span></span>
-<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1st Qu.: 6.039   1st Qu.: 2.488  </span></span>
-<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Median :15.118   Median : 3.928  </span></span>
-<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Mean   :16.266   Mean   : 4.556  </span></span>
-<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3rd Qu.:21.629   3rd Qu.: 5.399  </span></span>
-<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Max.   :59.741   Max.   :11.025</span></span></code></pre></div>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Min.   : 2.098   Min.   : 1.796  </span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  1st Qu.: 6.039   1st Qu.: 2.695  </span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Median :15.118   Median : 3.684  </span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Mean   :16.266   Mean   : 4.668  </span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  3rd Qu.:21.629   3rd Qu.: 5.494  </span></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt;  Max.   :59.741   Max.   :12.133</span></span></code></pre></div>
 </div>
 
 

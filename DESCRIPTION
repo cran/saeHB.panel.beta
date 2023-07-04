@@ -2,7 +2,7 @@ Type: Package
 Package: saeHB.panel.beta
 Title: Small Area Estimation using HB for Rao Yu Model under Beta
         Distribution
-Version: 0.1.2
+Version: 0.1.3
 Authors@R: c(
     person("Dian Rahmawati", "Salis", , "dianrahmawatisalis03@gmail.com", role = c("aut", "cre")),
     person("Azka", "Ubaidillah", role = "aut")
@@ -29,8 +29,8 @@ LazyData: true
 NeedsCompilation: no
 RoxygenNote: 7.2.3
 SystemRequirements: JAGS (http://mcmc-jags.sourceforge.net)
-Packaged: 2023-06-20 04:45:28 UTC; LENOVO
+Packaged: 2023-07-04 06:50:07 UTC; LENOVO
 Author: Dian Rahmawati Salis [aut, cre],
   Azka Ubaidillah [aut]
 Repository: CRAN
-Date/Publication: 2023-06-20 05:00:02 UTC
+Date/Publication: 2023-07-04 07:10:02 UTC
