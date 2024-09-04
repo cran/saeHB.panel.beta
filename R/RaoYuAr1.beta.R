@@ -34,18 +34,14 @@
 #' period = max(dataBetaAr1[,"period"])
 #'
 #' result <- RaoYuAr1.beta(formula, area, period, data = dataBetaAr1)
-#'
-#'
 #' result$Est
 #' result$refVar
 #' result$coefficient
 #' result$plot
-#' result$convergence.test
-#'
 #' ## For data with non-sampled area use dataBetaAr1Ns
 #'
 RaoYuAr1.beta<-function( formula, area, period,  iter.update=3, iter.mcmc=2000,
-                    thin = 1, burn.in =1000, tau.e = 1, tau.v=1, data){
+                         thin = 1, burn.in =1000, tau.e = 1, tau.v=1, data){
 
   result <- list(Est = NA, refVar = NA, coefficient = NA, plot = NA, convergence.test= NA)
   formuladata <- model.frame(formula, data, na.action = NULL)
@@ -117,13 +113,13 @@ RaoYuAr1.beta<-function( formula, area, period,  iter.update=3, iter.mcmc=2000,
       cat("model {
         for (i in 1:m) {
 				    v[i]~dnorm(0,tau.v)
+				    phi[i] ~ dgamma(phi.a,phi.b)
 				    for (j in 1:t){
 				      y[i,j]~dbeta(A[i,j],B[i,j])
-				      A[i,j] <- mu[i,j] * phi[i,j]
-				      B[i,j] <- (1-mu[i,j]) * phi[i,j]
+				      A[i,j] <- mu[i,j] * phi[i]
+				      B[i,j] <- (1-mu[i,j]) * phi[i]
 				      logit(mu[i,j]) <- b[1] + sum(b[2:nvar]*(x[i, j, 1:aux])) + v[i] +  u[i,j]
 				      eps[i,j]~dnorm(0,tau.e)
-				      phi[i,j] ~ dgamma(phi.a,phi.b)
 				    }
 				    u[i,1]<-eps[i,1]
 				    for(j in 2:t){
@@ -174,13 +170,13 @@ RaoYuAr1.beta<-function( formula, area, period,  iter.update=3, iter.mcmc=2000,
       b.varnames[i] <-str_replace_all(paste("b[",idx.b.varnames,"]"),pattern=" ", replacement="")
     }
 
-    convergence = geweke.diag(samps)
-    convergence =matrix(unlist(convergence),  nrow = 1)
-    convergence.param= convergence[,(2:(nvar+1))]
-    zscore = as.matrix(convergence.param,nrow = 1)
-    rownames(zscore) = b.varnames
-    colnames(zscore) = c("Z-score")
-    zscore= t(zscore)
+    convergence <- geweke.diag(samps)
+    convergence<-matrix(unlist(convergence),  nrow = 1)
+    convergence.param<- convergence[,(2:(nvar+1))]
+    zscore <- as.matrix(convergence.param,nrow = 1)
+    rownames(zscore) <- b.varnames
+    colnames(zscore) <- c("Z-score")
+    zscore<- t(zscore)
 
     result_mcmc <- samps1[,c(2:(nvar+1))]
     colnames(result_mcmc[[1]]) <- b.varnames
@@ -263,13 +259,13 @@ RaoYuAr1.beta<-function( formula, area, period,  iter.update=3, iter.mcmc=2000,
       cat("model {
 						for (i in 1:NS) {
 					v[i]~dnorm(0,tau.v)
+				  phi[i] ~ dgamma(phi.a,phi.b)
 					for (j in 1:t){
 		  			  y[i,j]~dbeta(A[i,j],B[i,j])
-				      A[i,j] <- mu[i,j] * phi[i,j]
-				      B[i,j] <- (1-mu[i,j]) * phi[i,j]
+				      A[i,j] <- mu[i,j] * phi[i]
+				      B[i,j] <- (1-mu[i,j]) * phi[i]
 				      logit(mu[i,j]) <- b[1] + sum(b[2:nvar]*(xS[i, j, 1:aux])) + v[i] +  u[i,j]
 				      eps[i,j]~dnorm(0,tau.e)
-				      phi[i,j] ~ dgamma(phi.a,phi.b)
 					}
 					  u[i,1]<-eps[i,1]
 					for(j in 2:t){
@@ -279,13 +275,13 @@ RaoYuAr1.beta<-function( formula, area, period,  iter.update=3, iter.mcmc=2000,
 
 					for (i in 1:NTS) {
 					  vT[i]~dnorm(0,tau.v)
+				    phiT[i] ~ dgamma(phi.a,phi.b)
 					  for (j in 1:t){
 					    yT[i,j]~dbeta(AT[i,j],BT[i,j])
-				      AT[i,j] <- muT[i,j] * phiT[i,j]
-				      BT[i,j] <- (1-muT[i,j]) * phiT[i,j]
+				      AT[i,j] <- muT[i,j] * phiT[i]
+				      BT[i,j] <- (1-muT[i,j]) * phiT[i]
 					    logit(muT[i,j]) <- b[1] + sum(b[2:nvar]*(xTS[i, j, 1:aux])) + vT[i] +  uT[i,j]
 				      epsT[i,j]~dnorm(0,tau.e)
-				      phiT[i,j] ~ dgamma(phi.a,phi.b)
 					  }
 					  uT[i,1]<-epsT[i,1]
 					  for(j in 2:t){
@@ -341,13 +337,13 @@ RaoYuAr1.beta<-function( formula, area, period,  iter.update=3, iter.mcmc=2000,
       b.varnames[i] <-str_replace_all(paste("b[",idx.b.varnames,"]"),pattern=" ", replacement="")
     }
 
-    convergence = geweke.diag(samps)
-    convergence =matrix(unlist(convergence),  nrow = 1)
-    convergence.param= convergence[,(2:(nvar+1))]
-    zscore = as.matrix(convergence.param,nrow = 1)
-    rownames(zscore) = b.varnames
-    colnames(zscore) = c("Z-score")
-    zscore= t(zscore)
+    convergence <- geweke.diag(samps)
+    convergence<-matrix(unlist(convergence),  nrow = 1)
+    convergence.param<- convergence[,(2:(nvar+1))]
+    zscore <- as.matrix(convergence.param,nrow = 1)
+    rownames(zscore) <- b.varnames
+    colnames(zscore) <- c("Z-score")
+    zscore<- t(zscore)
 
     result_mcmc <- samps1[,c(2:(nvar+1))]
     colnames(result_mcmc[[1]]) <- b.varnames
@@ -395,9 +391,9 @@ RaoYuAr1.beta<-function( formula, area, period,  iter.update=3, iter.mcmc=2000,
   result$refVar <- a.var
   result$coefficient <- coef
   result$plot <- list(graphics.off(), par(mar = c(2, 2, 2, 2)),
-                     autocorr.plot(result_mcmc, col = "brown2", lwd = 2),
-                     plot(result_mcmc, col = "brown2", lwd = 2))
-  result$convergence.test = zscore
+                      autocorr.plot(result_mcmc, col = "brown2", lwd = 2),
+                      plot(result_mcmc, col = "brown2", lwd = 2))
+  result$convergence.test <- zscore
   return(result)
 }
 
